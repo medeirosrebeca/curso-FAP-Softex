@@ -17,17 +17,19 @@ console.log (tamanho);
 
 /* 3. Adicionar o elemento "pera" ao final do array de frutas do exercício anterior.*/
 
-frutas.push("pera");
+const frutas2 = ["maça", "banana", "laranja", "uva", "manga"];
+frutas2.push("pera");
 
 /* 4. Remover o primeiro elemento do array de frutas do exercício anterior.*/
 
-frutas.shift();
-console.log(frutas);
+const frutas3 = ["maça", "banana", "laranja", "uva", "manga"];
+frutas3.shift();
+console.log(frutas3);
 
-/* 5. Dado o array abaixo, verificar se o número 25 está presente e exibir uma mensagem indicando se ele foi encontrado ou não.
-const numeros = [10,20,30,40,50];*/
+/* 5. Dado o array abaixo, verificar se o número 25 está presente e exibir uma mensagem indicando
+se ele foi encontrado ou não. const numeros = [10,20,30,40,50];*/
 
 const numeros = [10,20,30,40,50];
 const verificarNumero = 25;
-const verificarPresente = numeros.include(verificarNumero);
-console.log (verificarPresente);
+const verificarPresente = numeros.includes(verificarNumero);
+console.log ("O número", verificarNumero, "foi encontrado?", verificarPresente);
