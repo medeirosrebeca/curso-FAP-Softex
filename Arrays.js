@@ -16,12 +16,11 @@ console.log (frutas[length-1]);
 
 /* 3. Adicionar o elemento "pera" ao final do array de frutas do exercício anterior.*/
 
-const frutas = [maça, banana, laranja, uva, manga];
+
 frutas.push(pera);
 
 /* 4. Remover o primeiro elemento do array de frutas do exercício anterior.*/
 
-const frutas = [maça, banana, laranja, uva, manga];
 frutas.splice(0,1);
 console.log(frutas);
 
