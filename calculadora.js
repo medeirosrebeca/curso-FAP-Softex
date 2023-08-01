@@ -16,5 +16,5 @@ function calculadora (num1, num2, entrada){
       }else if (entrada === 4){
          console.log (`Você definiu a divisão dos números ${num1} / ${num2}`);
       } else     
-   return "Resultado 0.";
+return "Resultado 0.";
 }
