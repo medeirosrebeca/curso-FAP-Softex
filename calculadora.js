@@ -12,7 +12,7 @@ function calculadora (num1, num2, entrada){
       } else if (entrada === 2) {
          console.log (`Você definiu a subtração dos números ${num1} - ${num2}`);
       } else if (entrada === 3){
-         console.log (`Você definiu a multipllicação dos números ${num1} * ${num2}`);
+         console.log (`Você definiu a multiplicação dos números ${num1} * ${num2}`);
       }else if (entrada === 4){
          console.log (`Você definiu a divisão dos números ${num1} / ${num2}`);
       } else     
