@@ -33,3 +33,9 @@ retornar true se for um array e false caso contrario.*/
 
 
 console.log(Array.isArray(frutas));
+/*function verArray (2);
+if ((typeof 2 == "array")){
+    return true;
+} else {
+    return false;
+}*/
