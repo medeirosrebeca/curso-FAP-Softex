@@ -7,25 +7,27 @@ Para remover item, usar 'delete' = variavel.lenght-1. Para remover TUDO, usar 'a
 1. Acessar o 2 elemento e armazenar em uma variavel chamada "segundoElemento".*/
 
 const meuArray = [10,20,30,40,50];
-meuArray [1] = segundoElemento;
+const segundoElemento = meuArray [1];
 
 /* 2. Calcular e exibir o tamanho do seguinte array: const frutas = ['maça', 'banana', 'laranja', 'uva', 'manga'];*/
 
-const frutas = [maça, banana, laranja, uva, manga];
-console.log (frutas[length-1]);
+const frutas = ["maça", "banana", "laranja", "uva", "manga"];
+const tamanho = frutas.length;
+console.log (tamanho);
 
 /* 3. Adicionar o elemento "pera" ao final do array de frutas do exercício anterior.*/
 
-
-frutas.push(pera);
+frutas.push("pera");
 
 /* 4. Remover o primeiro elemento do array de frutas do exercício anterior.*/
 
-frutas.splice(0,1);
+frutas.shift();
 console.log(frutas);
 
 /* 5. Dado o array abaixo, verificar se o número 25 está presente e exibir uma mensagem indicando se ele foi encontrado ou não.
 const numeros = [10,20,30,40,50];*/
 
 const numeros = [10,20,30,40,50];
-console.log (numeros);
+const verificarNumero = 25;
+const verificarPresente = numeros.include(verificarNumero);
+console.log (verificarPresente);
