@@ -3,18 +3,23 @@ e o terceiro será a entrada que definirá a operação a ser executada. Conside
 1. Soma; 2. Subtração; 3. Multiplicação; 4. Divisão
 Caso seja inserido um número de operação que não exista, o resultado deverá ser 0.*/
 
-function calculadora (num1, num2, entrada){
-      var num1 = 10;
-      var num2 = 2;
-      var entrada = 1;
-      if (entrada === 1){
-         console.log (`Você definiu a soma dos números ${num1} + ${num2}`);
-      } else if (entrada === 2) {
-         console.log (`Você definiu a subtração dos números ${num1} - ${num2}`);
-      } else if (entrada === 3){
-         console.log (`Você definiu a multiplicação dos números ${num1} * ${num2}`);
-      }else if (entrada === 4){
-         console.log (`Você definiu a divisão dos números ${num1} / ${num2}`);
-      } else     
-return 0;
+const resultado = calculadora (10,2,5)
+
+function calculadora (num1, num2, entrada) {
+      switch (entrada) {
+      case 1:
+         console.log (`Você definiu a subtração dos números ${num1} + ${num2} = ${num1 + num2}`);
+         break;
+      case 2:
+         console.log (`Você definiu a subtração dos números ${num1} - ${num2} = ${num1 - num2}`);
+         break;
+      case 3:
+         console.log (`Você definiu a multiplicação dos números ${num1} * ${num2} = = ${num1 * num2}`);
+         break;
+      case 4:
+         console.log (`Você definiu a dvisão dos números ${num1} / ${num2} = = ${num1 / num2}`);
+         break;
+      default:
+         console.log ("Resultado 0. Escolha entre 1 a 4.");
+   }
 }
