@@ -3,23 +3,19 @@
 completará, no ano atual (2023). Caso o usuário não digite um número ou apareça um inválido no campo do
 ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.*/
 
-let nome;
 let ano;
 let idade;
+let nome;
+let anoatual;
 
+nome = prompt("Qual seu nome completo?");
+alert('Olá, ' + nome);
 
-windows.prompt ("Qual seu nome completo?");
-while (ano < 1922 || ano > 2022 ){
-    try {
-        ano = parseInt(prompt('Digite o ano de nascimento entre 1922 e 2022?'));
-        if (ano < 1922 || ano > 2022){
-            alert('Ano inválido!');
-            ano = prompt('Digite novamente o ano de nascimento:');
-        } else {
-            alert('Seu ano é:', ano);
-        }
-    } catch (error){
-        alert(error);
-        alert('Ano invalido. Digite novamente:');
+ano = parseInt(prompt('Digite o ano de nascimento entre 1922 e 2022?'));
+while (ano < 1922 && ano > 2022 ){
+    ano = prompt ('Ano inválido. Digite novamente o ano:');
+    if (ano > 1922 || ano < 2022){
+        anoatual = new Date().getFullYear();
+        console.log('Você tem' + anoatual - ano, 'anos');
     }
 }
