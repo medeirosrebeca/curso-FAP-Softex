@@ -7,6 +7,7 @@ let nome;
 let ano;
 let idade;
 
+
 windows.prompt ("Qual seu nome completo?");
 while (ano < 1922 || ano > 2022 ){
     try {
