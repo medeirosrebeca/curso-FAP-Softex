@@ -2,12 +2,13 @@
 2022. A partir dessas informações, o sistema mostrará o nome do usuário e a idade que completou, ou
 completará, no ano atual (2023). Caso o usuário não digite um número ou apareça um inválido no campo do
 ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.*/
+var readlineSync = require('readline-sync')
 
-let nome = prompt("Qual seu nome completo?");
+let nome = readlineSync.question("Qual seu nome completo?");
 let ano = true;
 
     while (true) {
-        ano = parseInt(prompt('Digite o ano de nascimento:'))
+        ano = readlineSync.questionInt('Digite o ano de nascimento:')
         try{
             if (isNaN(ano)) {
             throw Error ('Digite apenas números:');
