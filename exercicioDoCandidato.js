@@ -14,33 +14,34 @@ let votoFinal = {
 while (true) {
     try{
         let votoCandidato = readlineSync.questionInt('Vote no numero do candidato:');
-            if (votoCandidato != 889 || votoCandidato || 847 && votoCandidato || 515 && votoCandidato || 0){
-                votoFinal = 'undefined';
+            if (votoCandidato != 889 || votoCandidato != 847 || votoCandidato != 515 || votoCandidato != 0){
+                votoFinal = 'null'; //VER AQUI!!!!******
             }
             if (votoCandidato = 889){
                 votoFinal.x = votoFinal.x + 1;
             }
             if (votoCandidato = 847){
-                 votoFinal.y += votoFinal.y + 1;
+                 votoFinal.y = votoFinal.y + 1;
             }
             if (votoCandidato = 515){
-                 votoFinal.z += votoFinal.z + 1;
+                 votoFinal.z = votoFinal.z + 1;
             }
             if (votoCandidato = 0){
-                 votoFinal.branco += votoFinal.branco + 1;
+                 votoFinal.branco = votoFinal.branco + 1;
             }
     } catch (e) {
         alert('Digite apenas números.');
     }
     
     try {
+    let resultadoX = votoFinal.x; //VER AQUII!!!****
     let finalizarVoto = readlineSync.question('Deseja finalizar a votação? Digite Sim ou Não:');
         if (finalizarVoto != 'Sim'){
             throw Error ('Digite o seu candidato:');
         }
         if  (finalizarVoto = 'Sim') {
-            console.log (`O candidato X teve: ${votoFinal.x}, O candidato Y teve: ${votoFinal.y}, O candidato Z teve: ${votoFinal.z}, Votos Brancos: ${votoFinal.branco}`);
-            break;
+            console.log (`O candidato X teve: ${resultadoX}, O candidato Y teve: , O candidato Z teve: , Votos Brancos: `);
+            break; //VER AQUII!!!!!*******
             }
         } catch (e) {
             console.log('Digite novamente o número do seu candidato:');   
