@@ -14,8 +14,8 @@ let votoFinal = {
 while (true) {
     try{
         let votoCandidato = readlineSync.questionInt('Vote no numero do candidato:');
-            if (votoCandidato != 889 || votoCandidato != 847 || votoCandidato != 515 || votoCandidato != 0){
-                votoFinal = 'null'; //VER AQUI!!!!******
+            if (votoCandidato != 889 && votoCandidato != 847 && votoCandidato != 515 && votoCandidato != 0){
+                votoFinal = nulo; //VER AQUI!!!!******
             }
             if (votoCandidato = 889){
                 votoFinal.x = votoFinal.x + 1;
@@ -30,7 +30,7 @@ while (true) {
                  votoFinal.branco = votoFinal.branco + 1;
             }
     } catch (e) {
-        alert('Digite apenas números.');
+        console.log('Digite apenas números.');
     }
     
     try {
