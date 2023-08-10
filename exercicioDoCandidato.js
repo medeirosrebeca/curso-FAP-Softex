@@ -14,20 +14,20 @@ let votoFinal = {
 while (true) {
     try{
         let votoCandidato = readlineSync.questionInt('Vote no numero do candidato:');
-            if (votoCandidato != 889 && votoCandidato != 847 && votoCandidato != 515 && votoCandidato != 0){
+            if (votoCandidato != 889 || votoCandidato != 847 || votoCandidato != 515 || votoCandidato != 0){
                 votoFinal = nulo; //VER AQUI!!!!******
             }
             if (votoCandidato = 889){
-                votoFinal.x = votoFinal.x + 1;
+                votoFinal.x = votoFinal.x ++;
             }
             if (votoCandidato = 847){
-                 votoFinal.y = votoFinal.y + 1;
+                 votoFinal.y = votoFinal.y ++;
             }
             if (votoCandidato = 515){
-                 votoFinal.z = votoFinal.z + 1;
+                 votoFinal.z = votoFinal.z ++;
             }
             if (votoCandidato = 0){
-                 votoFinal.branco = votoFinal.branco + 1;
+                 votoFinal.branco = votoFinal.branco ++;
             }
     } catch (e) {
         console.log('Digite apenas números.');
@@ -35,6 +35,7 @@ while (true) {
     
     try {
     let resultadoX = votoFinal.x; //VER AQUII!!!****
+    
     let finalizarVoto = readlineSync.question('Deseja finalizar a votação? Digite Sim ou Não:');
         if (finalizarVoto != 'Sim'){
             throw Error ('Digite o seu candidato:');
