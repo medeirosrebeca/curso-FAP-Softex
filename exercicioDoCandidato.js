@@ -1,47 +1,49 @@
 /*O código deve perguntar se deseja finalizar a votação depois do voto. Caso o número do voto não
 corresponda a nenhum candidato ou seja branco, ele deve ser tratado como nulo. Se for inserido um texto
 ao invés de número, o código deve retornar uma mensagem para votar novamente. Quando a votação for
-finalizada, o código deverá mostrar o vencedor, aquele com o maior número de votos e, também, a quantidade
-de votos de cada candidato, os brancos e nulos.*/
+finalizada, o código deverá mostrar o vencedor, aquele com o maior número de votos e, também, a
+quantidade de votos de cada candidato, os brancos e nulos.*/
+var readlineSync = require('readline-sync')
 
-let votoFinal;
-const candidato = {
-    x: 889,
-    y: 847,
-    z: 515,
+let votoFinal = {
+    x: 0,
+    y: 0,
+    z: 0,
     branco: 0
-};
+}
 while (true) {
     try{
-        let votoCandidato = parseInt(prompt('Vote no numero do candidato:'));
-            if (votoCandidato != 889 && votoCandidato != 847 && votoCandidato != 515 && votoCandidato != 0){
-            votoCandidato = null;
+        let votoCandidato = readlineSync.questionInt('Vote no numero do candidato:');
+            if (votoCandidato != 889 || votoCandidato || 847 && votoCandidato || 515 && votoCandidato || 0){
+                votoFinal = 'undefined';
             }
             if (votoCandidato = 889){
-            candidato.x;
+                votoFinal.x = votoFinal.x + 1;
             }
             if (votoCandidato = 847){
-            candidato.y;
+                 votoFinal.y += votoFinal.y + 1;
             }
             if (votoCandidato = 515){
-            candidato.z;
+                 votoFinal.z += votoFinal.z + 1;
             }
             if (votoCandidato = 0){
-            candidato.branco;
+                 votoFinal.branco += votoFinal.branco + 1;
             }
     } catch (e) {
         alert('Digite apenas números.');
     }
+    
     try {
-    let finalizarVoto = prompt('Deseja finalizar a votação? Digite Sim ou Não:');
+    let finalizarVoto = readlineSync.question('Deseja finalizar a votação? Digite Sim ou Não:');
         if (finalizarVoto != 'Sim'){
             throw Error ('Digite o seu candidato:');
         }
         if  (finalizarVoto = 'Sim') {
-            console.log ('O candidato com maior votos foi:' + votoFinal);
+            console.log (`O candidato X teve: ${votoFinal.x}, O candidato Y teve: ${votoFinal.y}, O candidato Z teve: ${votoFinal.z}, Votos Brancos: ${votoFinal.branco}`);
             break;
             }
         } catch (e) {
             console.log('Digite novamente o número do seu candidato:');   
             }
+    
 }
