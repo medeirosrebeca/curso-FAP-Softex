@@ -3,9 +3,9 @@ informações sobre animais e as suas características. Cada linha deve represen
 terá as diferentes informações sobre ele, como nome, espécie e idade.*/
 
 let animais = [
-    ['Major', 'Cão', '1'], //1 linha: 
-    ['Simba', 'Leão', '10'], //2 linha: 
-    ['Filomena', 'Tartaruga', '50'] //3 linha:
+    ['Cachorro', 'American Staffordshire Terrier', '1'], //1 linha: 
+    ['Leão', 'P. Leo', '10'], //2 linha: 
+    ['Tartaruga', 'Tartaruga-cabeçuda', '50'] //3 linha:
 ];
 
 
