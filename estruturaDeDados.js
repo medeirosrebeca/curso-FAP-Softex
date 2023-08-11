@@ -4,38 +4,27 @@ suas regras de operações, qual seria a sequência dos números removidos em ca
 completamente utilizando o array mencionado?*/
 
 // 1. Fila:
-const fila = [3, 7, 9, 1, 0];
-function desenfileirar (){
-    if (fila == ""){
-        return null;
-    }
-    return fila.shift();
-}
-console.log(desenfileirar());
+// const fila = [3, 7, 9, 1, 0];
+// while ((remover = fila.shift()) !== undefined) {
+//     console.log(remover);
+// }
 
 // 2. Lista:
 const lista = [3, 7, 9, 1, 0];
-
-function remover(){
-    const elemento = elemento.indexOf();
-    if (elemento !== 1){
-        lista.splice(elemento, 1);
+function removerNumeroEspecifico(numero){
+    const indice = lista.indexOf(numero);
+    if (indice !== -1){
+        lista.splice(indice, 1);
         return true;
     } else {
         return false;
     }
 }
-remover ();
-console.log(lista);
+removerNumeroEspecifico (9); //
+console.log(lista); // A lista mostra com o numero escolhido removido.
 
 //3. Pilha:
-const pilha = [3, 7, 9, 1, 0];
-
-function desempilhar (){
-    if (vazia()){
-        return null;
-    }
-    return pilha.pop();
-}
-desempilhar();
-console.log(tamanho());
+// const pilha = [3, 7, 9, 1, 0];
+// while ((remover = pilha.pop()) !== undefined) {
+//     console.log(remover);
+// }
