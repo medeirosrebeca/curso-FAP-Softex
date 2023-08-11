@@ -3,14 +3,15 @@ por diante, seguindo a ordem. Levando em conta as três estruturas de dados (fil
 suas regras de operações, qual seria a sequência dos números removidos em cada uma delas para esvaziá-las
 completamente utilizando o array mencionado?*/
 
-// 1. Fila:
-// const fila = [3, 7, 9, 1, 0];
-// while ((remover = fila.shift()) !== undefined) {
-//     console.log(remover);
-// }
+//1. Fila:
+const fila = [3, 7, 9, 1, 0];
+while ((remover = fila.shift()) !== undefined) {
+    console.log(remover); //FIFO
+}
 
-// 2. Lista:
+//2. Lista:
 const lista = [3, 7, 9, 1, 0];
+
 function removerNumeroEspecifico(numero){
     const indice = lista.indexOf(numero);
     if (indice !== -1){
@@ -20,11 +21,11 @@ function removerNumeroEspecifico(numero){
         return false;
     }
 }
-removerNumeroEspecifico (9); //
-console.log(lista); // A lista mostra com o numero escolhido removido.
+removerNumeroEspecifico (0); //Você diz qual numero quer remover. Se não tiver na lista, imprime todos.
+console.log(lista); // A lista mostra com o numero removido.
 
 //3. Pilha:
-// const pilha = [3, 7, 9, 1, 0];
-// while ((remover = pilha.pop()) !== undefined) {
-//     console.log(remover);
-// }
+const pilha = [3, 7, 9, 1, 0];
+while ((remover = pilha.pop()) !== undefined) {
+    console.log(remover); //LIFO
+}
