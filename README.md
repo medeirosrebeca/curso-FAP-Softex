@@ -1,3 +1,5 @@
-# Exercicios: Lista encadeada, Algoritmo de busca
+# Conceitas de Sala e Exercicios
 
-Introdução a funções com e sem retorno.
+- Comandos: IF, ELSE IF.
+- Switch.
+- Funções com e sem retorno.
