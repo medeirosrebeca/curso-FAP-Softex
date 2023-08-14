@@ -1,3 +1,3 @@
-# exercicio_candidato
+# Exercicios: Lista encadeada, Algoritmo de busca
 
-Introdução a funções
+Introdução a funções com e sem retorno.
