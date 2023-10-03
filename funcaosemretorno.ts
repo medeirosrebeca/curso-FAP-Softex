@@ -49,15 +49,24 @@
 
 
 
-//1.1Escreva uma função chamada calcularMedia que receba um array de números como parâmetro e calcule a média desses números. Não é necessário exibir o resultado, apenas retorne o valor da média.
+//1.1Escreva uma função chamada calcularMedia que receba um array de números como parâmetro e calcu
+//le a média desses números. Não é necessário exibir o resultado, apenas retorne o valor da media.
+// function calcularMedia
 
-//2.2Crie uma função chamada maiorNumero que receba um array de números como parâmetro e exiba o maior número presente no array no console.
+// //2.2Crie uma função chamada maiorNumero que receba um array de números como parâmetro e exiba o
+// //maior número presente no array no console.
+// function maiorNumero
 
-//3.3Escreva uma função chamada contarVogais que aceite uma string como parâmetro e conte quantas vogais (a, e, i, o, u) ela contém. Exiba o resultado no console.
+// //3.3Escreva uma função chamada contarVogais que aceite uma string como parâmetro e conte quantas
+// //vogais (a, e, i, o, u) ela contém. Exiba o resultado no console.
+// function contarVogais
 
-//4.4Crie uma função chamada imprimirTabuada que aceite um número como entrada e exiba a tabuada desse número de 1 a 10 no console.
+// //4.4Crie uma função chamada imprimirTabuada que aceite um número como entrada e exiba a tabuada
+// //desse número de 1 a 10 no console.
+// function imprimirTabuada
 
-//5.5Escreva uma função chamada verificarPrimo que receba um número como parâmetro e exiba no console se o número é primo ou não.
-
+// //5.5Escreva uma função chamada verificarPrimo que receba um número como parâmetro e exiba no console
+// //se o número é primo ou não.
+// function verificarPrimo
 
 
