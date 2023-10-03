@@ -32,13 +32,21 @@
 // verificarPar(9);
 
 //5. Crie uma função chamada imprimirLista que aceite um array como parâmetro e exiba cada elemento desse array no console, um por um.
-function imprimirLista (x:any): void {
-    for (var i = 0; i <= x.length-1; i++) {
-    console.log(x[i]); //criar um for e definir o tamanho.
-    }
-}
-    let lista = [4,7,9,43243,'tetrx'];
-    imprimirLista (lista);    //criar depois o array e chamar dentro da função o array.
+// function imprimirLista (x:any): void {
+//     for (var i = 0; i <= x.length-1; i++) {
+//     console.log(x[i]); //criar um for e definir o tamanho.
+//     }
+// }
+//     let lista = [4,7,9,43243,'tetrx'];
+//     imprimirLista (lista);    //criar depois o array e chamar dentro da função o array.
+
+// const lista = [4,7,9,43243,'tetrx'];
+// function imprimirLista(nome:any, indice:number): void{
+//     console.log(`${indice + 1}. ${nome}`);
+
+// }
+// lista.forEach(imprimirLista);
+
 
 
 //1.1Escreva uma função chamada calcularMedia que receba um array de números como parâmetro e calcule a média desses números. Não é necessário exibir o resultado, apenas retorne o valor da média.
