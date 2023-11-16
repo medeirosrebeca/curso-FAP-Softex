@@ -1,94 +1,93 @@
-// Classe Observador
-class Observador {
-    atualizar() {}
+// Classe Observer
+class Observer {
+  update() {}
+}
+
+// Classe Subject
+class Subject {
+  constructor() {
+    this.observers = [];
   }
-  
-  // Classe Sujeito
-  class Sujeito {
-    constructor() {
-      this.observadores = [];
-    }
-  
-    adicionarObservador(observador) {
-      this.observadores.push(observador);
-    }
-  
-    removerObservador(observador) {
-      this.observadores = this.observadores.filter(obs => obs !== observador);
-    }
-  
-    notificar() {
-      this.observadores.forEach(observador => observador.atualizar());
-    }
+
+  addObserver(observer) {
+    this.observers.push(observer);
   }
-  
-  // Classe Editor (Sujeito)
-  class Editor extends Sujeito {
-    constructor() {
-      super();
-      this.linhas = [];
-    }
-  
-    adicionarLinha(linha) {
-      this.linhas.push(linha);
-      this.notificar();
-    }
-  
-    removerLinha(numeroLinha) {
-      if (numeroLinha >= 0 && numeroLinha < this.linhas.length) {
-        this.linhas.splice(numeroLinha, 1);
-        this.notificar();
-      }
-    }
-  
-    obterConteudo() {
-      return this.linhas.join('\n');
+
+  removeObserver(observer) {
+    this.observers = this.observers.filter(obs => obs !== observer);
+  }
+
+  notify() {
+    this.observers.forEach(observer => observer.update());
+  }
+}
+
+// Classe Editor (Subject)
+class Editor extends Subject {
+  constructor() {
+    super();
+    this.lines = [];
+  }
+
+  addLine(line) {
+    this.lines.push(line);
+    this.notify();
+  }
+
+  removeLine(lineNumber) {
+    if (lineNumber >= 0 && lineNumber < this.lines.length) {
+      this.lines.splice(lineNumber, 1);
+      this.notify();
     }
   }
-  
-  // Subclasse EditorDeTexto
-  class EditorDeTexto extends Editor {
-    inserirLinha(numeroLinha, texto) {
-      if (numeroLinha >= 0 && numeroLinha <= this.linhas.length) {
-        this.linhas.splice(numeroLinha, 0, texto);
-        this.notificar();
-      }
+
+  getContent() {
+    return this.lines.join('\n');
+  }
+}
+
+// Subclasse TextEditor
+class TextEditor extends Editor {
+  insertLine(lineNumber, text) {
+    if (lineNumber >= 0 && lineNumber <= this.lines.length) {
+      this.lines.splice(lineNumber, 0, text);
+      this.notify();
     }
   }
-  
-  // Observador para imprimir conteúdo
-  class ObservadorConsole extends Observador {
-    constructor(editor) {
-      super();
-      this.editor = editor;
-      this.editor.adicionarObservador(this);
-    }
-  
-    atualizar() {
-      console.log('Conteúdo atualizado:\n', this.editor.obterConteudo());
-    }
+}
+
+// Observador para imprimir conteúdo
+class ConsoleObserver extends Observer {
+  constructor(editor) {
+    super();
+    this.editor = editor;
+    this.editor.addObserver(this);
   }
-  
-  // Exemplo de uso
-  const readline = require('readline-sync');
-  
-  const editorDeTexto = new EditorDeTexto();
-  const observadorConsole = new ObservadorConsole(editorDeTexto);
-  
-  console.log('Insira linhas de texto. Digite "SAIR" para salvar e sair.');
-  
-  let numeroLinha = 0;
-  while (true) {
-    const linha = readline.question(`Insira linha ${numeroLinha + 1}: `);
-    
-    if (linha === 'SAIR') {
-      editorDeTexto.notificar(); // Disparar evento "save"
-      break;
-    }
-  
-    editorDeTexto.inserirLinha(numeroLinha, linha);
-    numeroLinha++;
+
+  update() {
+    console.log('Conteúdo atualizado:\n', this.editor.getContent());
   }
+}
+
+// Exemplo de uso
+const readline = require('readline-sync');
+
+const textEditor = new TextEditor();
+const consoleObserver = new ConsoleObserver(textEditor);
+
+console.log('Insira linhas de texto. Digite "EOF" para salvar e sair.');
+
+let lineNumber = 0;
+while (true) {
+  const line = readline.question(`Insira linha ${lineNumber + 1}: `);
   
-  console.log('\nConteúdo salvo:\n', editorDeTexto.obterConteudo());
-  
+  if (line === 'EOF') {
+    textEditor.notify(); // Disparar evento "save"
+    break;
+  }
+
+  textEditor.insertLine(lineNumber, line);
+  lineNumber++;
+}
+
+console.log('\nConteúdo salvo:\n', textEditor.getContent());
