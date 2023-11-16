@@ -7,7 +7,7 @@ class Pato {
   // Implementação concreta de Pato
   class PatoDeBorracha extends Pato {
     grasnar() {
-      console.log("Squeak! Squeak! (Pato de borracha)");
+      console.log("Squeak! Squeak! Sou um pato de borracha!");
     }
   
     voar() {
