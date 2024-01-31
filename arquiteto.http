@@ -1,0 +1,28 @@
+###
+GET http://localhost:3000/usuarios
+
+###
+GET http://localhost:3000/usuarios/4
+
+
+###
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Branca de Neve"
+}
+
+###
+PUT http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+{
+  "nome": "Cinderela"
+}
+
+###
+DELETE http://localhost:3000/usuarios/2
+
+###
+GET http://localhost:3000/saudacao/Desenhos
