@@ -19,8 +19,5 @@ retornar true ou false: console.log(Array.isArray('variavel'));
 
 * Estudo de << DO WHILE >>
 
-  
-* Estudo de << FOR >>
-
-  
+   
 * Estudo de << WHILE>>
