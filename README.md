@@ -1,6 +1,6 @@
 # Aula-01-08
 
-* Estudo de << Arrays >>:
+* Estudo de << ARRAYS >>:
   - Para acessar elemento, usar colchetes [].
   - Para alterar valor, atribuir indice e colocar novo valor.
   - Para adicionar novos indices, 'usar variavel.push()'.
@@ -9,12 +9,18 @@
   - Para calcular e exibir o tamanho do array: usar o '.length'.
   - Para adicionar elemento ao final do array: '.push'.
   - Para remover o primeiro elemento do array: '.shift'.
+  - Para concatenar 2 arrays: '.concat'.
+  - Para filtrar escolhas: '.filter()'.
+  - Para ordenar o array em ordem crescente: '.sort()'.
+  - Para encontrar o indice em que a variável esta localizada: 'constante.indexOf('variavel').
+  - Para uma função que receba um parametro e verificar se é um array ou não. A função deve
+retornar true ou false: console.log(Array.isArray('variavel'));
 
 
-* Estudo de << Do While >>
+* Estudo de << DO WHILE >>
 
   
-* Estudo de << For >>
+* Estudo de << FOR >>
 
   
-* Estudo de << While>>
+* Estudo de << WHILE>>
