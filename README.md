@@ -1,6 +1,6 @@
-# Aula-01-08
+# Aula 01-08: Conhecendo Javascript 
 
-* Estudo de << ARRAYS >>:
+* Estudo de << ARRAYS >>: São estruturas de dados que armazenam elementos.
   - Para acessar elemento, usar colchetes [].
   - Para alterar valor, atribuir indice e colocar novo valor.
   - Para adicionar novos indices, 'usar variavel.push()'.
@@ -17,7 +17,7 @@
 retornar true ou false: console.log(Array.isArray('variavel'));
 
 
-* Estudo de << DO WHILE >>
+* Estudo de << DO WHILE >>: Garantir que uma ação seja realizada pelo menos uma vez, independentemente da condição inicial.
 
    
-* Estudo de << WHILE >>
+* Estudo de << WHILE >>: Cria um laço baseado em uma condição.
