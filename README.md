@@ -1,3 +1,4 @@
+HEAD
  HEAD
 HEAD
 # Aula 01-08: Conhecendo Javascript 
@@ -40,3 +41,5 @@ retornar true ou false: console.log(Array.isArray('variavel'));
 - Uso básico do enum.
 
 # Softex-BD
+
+#Typescript
