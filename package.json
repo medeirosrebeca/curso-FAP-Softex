@@ -1,13 +1,11 @@
 {
  HEAD
- HEAD
   "dependencies": {
     "readline-sync": "^1.4.10"
 
   "name": "typescript",
 
   "name": "desafios",
->>>>>>> desafios/main
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -36,5 +34,10 @@
     "express": "^4.18.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3".
+
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+
+>>>>>>> exercicios_padroes/main
   }
 }

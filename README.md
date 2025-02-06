@@ -1,7 +1,4 @@
 HEAD
-HEAD
- HEAD
-HEAD
 # Aula 01-08: Conhecendo Javascript 
 
 * Estudo de << ARRAYS >>: São estruturas de dados que armazenam elementos.
@@ -46,3 +43,5 @@ retornar true ou false: console.log(Array.isArray('variavel'));
 #Typescript
 
 #desafios
+
+# Exercicios_Padroes
