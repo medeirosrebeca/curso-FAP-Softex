@@ -1,3 +1,4 @@
+ HEAD
 HEAD
 # Aula 01-08: Conhecendo Javascript 
 
@@ -37,3 +38,5 @@ retornar true ou false: console.log(Array.isArray('variavel'));
 - Fluxo de entrada e saída de dados: prompt e alert.
 - Analise, identificação e tratamento de erro e exceção: try { ... } catch (error) { ... }, Throw exceptions.
 - Uso básico do enum.
+
+# Softex-BD
